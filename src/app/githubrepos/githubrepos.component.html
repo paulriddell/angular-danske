@@ -1,0 +1,14 @@
+<h2>Git Hub Repos</h2>
+<ul class="githubrepos">
+  <li *ngFor="let githubrepo of githubrepos"> 
+
+    <div class="row">
+        <span class="badge"><img [src]= "githubrepo.avatarUrl" class="githubrepo-avatar" /> </span>
+        <span style='float:right'> {{githubrepo.name}}   
+         <br>
+         {{githubrepo.description}}  
+         <input type="checkbox" id="isVisible" [value] ="githubrepo.isVisible" (onchange)= "save(githubrepo)"/>
+        </span>
+    </div>
+    </li>
+</ul>
